@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Interactive phishing awareness module: spot red flags in emails, recognise fake websites, understand social engineering, learn best practices, study real cases and test yourself with a 10-question quiz.">
+  <title>Phishing Awareness Module | CodeAlpha</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="#home"><span class="logo" aria-hidden="true">🎣</span> Phishing Awareness</a>
+      <div class="progress" aria-label="Modules visited">
+        <span id="progress-text">0 / 7</span>
+        <div class="bar"><div id="progress-fill" class="fill"></div></div>
+      </div>
+    </div>
+    <nav class="wrap nav" aria-label="Modules">
+      <a href="#home" data-nav="home">Start</a>
+      <a href="#email" data-nav="email">Red flags</a>
+      <a href="#websites" data-nav="websites">Fake sites</a>
+      <a href="#social" data-nav="social">Tactics</a>
+      <a href="#practices" data-nav="practices">Best practices</a>
+      <a href="#cases" data-nav="cases">Real cases</a>
+      <a href="#quiz" data-nav="quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <noscript><p class="notice">This interactive module needs JavaScript. Please enable it to continue.</p></noscript>
+
+    <section id="home" class="module" aria-labelledby="h-home">
+      <h1 id="h-home" tabindex="-1">Don’t take the bait</h1>
+      <p class="lead">Phishing is a scam in which attackers pretend to be someone you trust, such as a bank, an employer or a friend, to steal passwords, money or access. This short, hands-on module teaches you to spot it.</p>
+      <div class="grid" id="start-cards"></div>
+      <h2>What you will learn</h2>
+      <ul class="clean">
+        <li>Find the red flags in realistic scam emails.</li>
+        <li>Tell real web addresses from fake ones.</li>
+        <li>Recognise the tricks used in social engineering.</li>
+        <li>Know what to do before, and after, you click.</li>
+        <li>Test yourself with a 10-question scored quiz.</li>
+      </ul>
+      <p class="note">All brands, addresses and people in the simulations are fictional. The real cases are summaries of publicly reported incidents. Nothing here collects or sends your data. Your progress stays in your own browser.</p>
+      <p><a class="btn primary" href="#email">Start with red flags →</a></p>
+    </section>
+
+    <section id="email" class="module" aria-labelledby="h-email">
+      <h2 id="h-email" tabindex="-1">Spot the red flags</h2>
+      <p>Each message below is a simulated phishing email. Tap the parts that look suspicious to learn why.</p>
+      <div id="email-lab"></div>
+    </section>
+
+    <section id="websites" class="module" aria-labelledby="h-websites">
+      <h2 id="h-websites" tabindex="-1">Fake websites</h2>
+      <h3>Read a web address like a pro</h3>
+      <p class="url-anatomy" role="img" aria-label="Example address: https, subdomain login, domain pearlbank.co.ug, path /signin"><span class="u-scheme">https://</span><span class="u-sub">login.</span><span class="u-domain">pearlbank.co.ug</span><span class="u-path">/signin</span></p>
+      <ul class="legend">
+        <li><span class="dot d-scheme"></span><b>https://</b> means the connection is encrypted. It does not mean the site is trustworthy.</li>
+        <li><span class="dot d-sub"></span><b>Subdomain</b>: the owner of the domain can create any of these.</li>
+        <li><span class="dot d-domain"></span><b>Domain</b>: this shows who really owns the site. Read backwards from the first single slash.</li>
+        <li><span class="dot d-path"></span><b>Path</b>: anything after the domain. It can say anything.</li>
+      </ul>
+      <h3>Real or fake? Test yourself</h3>
+      <div id="url-game"></div>
+      <h3>Quick tips for spotting fake websites</h3>
+      <ul class="clean tips">
+        <li><b>Check the whole domain.</b> Attackers put the brand name first, as in <code>brand.com.evil.xyz</code>.</li>
+        <li><b>Watch for look-alikes.</b> Digits for letters (1 and l, 0 and o), extra hyphens, swapped letters.</li>
+        <li><b>The padlock is not a trust badge.</b> Many phishing sites use HTTPS.</li>
+        <li><b>Do not sign in from links in messages.</b> Type the address, use a bookmark or open the official app.</li>
+        <li><b>Preview shortened links</b> before opening them, or avoid them completely.</li>
+        <li><b>Be wary of pages that ask for everything at once:</b> password, PIN, card number and OTP.</li>
+        <li><b>A polished design proves nothing.</b> Copying a logo and layout is easy.</li>
+        <li><b>Take browser warnings seriously.</b> Do not click through them.</li>
+        <li><b>Use a password manager.</b> It will not autofill your login on the wrong domain.</li>
+        <li><b>Shopping sites:</b> if the price is too good to be true, search for reviews and check how new the site is.</li>
+      </ul>
+    </section>
+
+    <section id="social" class="module" aria-labelledby="h-social">
+      <h2 id="h-social" tabindex="-1">Social engineering tactics</h2>
+      <p>Social engineering means tricking people, not computers. Attackers rely on a handful of psychological levers.</p>
+      <div class="grid small" id="levers"></div>
+      <p class="callout"><b>The golden rule:</b> Pause. Verify. Report.</p>
+      <h3>Common tactics</h3>
+      <div id="tactics"></div>
+    </section>
+
+    <section id="practices" class="module" aria-labelledby="h-practices">
+      <h2 id="h-practices" tabindex="-1">Best practices</h2>
+      <p>Tick each habit as you commit to it. Your ticks are saved on this device only.</p>
+      <div id="practices-lab"></div>
+    </section>
+
+    <section id="cases" class="module" aria-labelledby="h-cases">
+      <h2 id="h-cases" tabindex="-1">Real cases</h2>
+      <p>These incidents were publicly reported. Each started with a human being tricked, not a clever piece of code.</p>
+      <div id="case-list"></div>
+    </section>
+
+    <section id="quiz" class="module" aria-labelledby="h-quiz">
+      <h2 id="h-quiz" tabindex="-1">Final quiz</h2>
+      <div id="quiz-lab"></div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Built for the CodeAlpha Cyber Security Internship by <a href="https://github.com/K-Mirembe-Mercy" rel="noopener noreferrer">Kafeero Mirembe Mercy</a>. Educational use only. MIT licensed.</p>
+  </footer>
+</body>
+</html>
